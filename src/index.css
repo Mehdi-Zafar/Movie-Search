@@ -1,13 +1,181 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Inter");
+
+* {
+  font-family: "Bungee", cursive;
+  letter-spacing: 1px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-image: url("../public/images/background.jpg");
+  background-size: contain;
+  background-position: top;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav {
+  color: coral;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+h3.caption {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+}
+
+.searchbar input {
+  height: 40px;
+  width: 250px;
+  text-align: center;
+  margin-inline: 10px;
+  border-radius: 7px;
+  border: none;
+  font-size: 1.1rem;
+  box-shadow: 1px 1px 3px 1px coral;
+  background-color: rgb(29, 27, 27);
+  color: coral;
+  font-family: "Inter", sans-serif;
+  text-transform: capitalize;
+}
+
+.searchbar input:focus {
+  background-color: rgba(29, 27, 27, 0.466);
+}
+
+.searchbar button {
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  background-color: rgb(29, 27, 27);
+  color: coral;
+  padding: 0 10px;
+  box-shadow: 1px 1px 3px 1px coral;
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-block: 20px;
+}
+
+.single-movie {
+  background-color: rgb(29, 27, 27);
+  margin: 10px;
+  text-align: center;
+  transition: all 1s;
+  width: 27%;
+  height: 500px;
+  border-radius: 10px;
+  position: relative;
+  color: coral;
+  overflow: hidden;
+}
+
+.single-movie:hover {
+  transform: translateY(-5px);
+  transition: all 1s;
+  /* background-color: rgba(29, 27, 27, 0); */
+  color: black;
+  background-color: coral;
+}
+
+.single-movie img {
+  height: 65%;
+  width: 100%;
+  border-radius: 10px;
+  transition: all 1s;
+}
+
+.single-movie img:hover {
+  /* opacity: 0.5; */
+  transition: all 1s;
+  transform: scale(1.05);
+}
+
+.noMovies {
+  display: block;
+  margin: 20px auto;
+  background-color: coral;
+  color: black;
+  padding: 15px;
+  border-radius: 10px;
+  width: fit-content;
+  text-align: center;
+}
+
+.movie-type {
+  font-size: 0.8rem;
+  margin-top: 0;
+  font-family: "Inter", sans-serif;
+  text-transform: capitalize;
+  font-weight: 900;
+  background-color: coral;
+  border-radius: 10px;
+  color: rgb(29, 27, 27);
+  width: fit-content;
+  padding: 3px 8px;
+  display: block;
+  margin: -3px auto 0 auto;
+  transition: all 1s;
+}
+
+.movie-title {
+  font-size: 1rem;
+  transition: all 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  text-shadow: 0 0 2px coral;
+  margin-bottom: 0px;
+  height: 80px;
+  width: 95%;
+  margin-inline: auto;
+}
+
+.movie-year {
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  background-color: rgb(29, 27, 27);
+  border-radius: 10px;
+  padding: 0px 5px;
+  color: coral;
+}
+
+.imdb-link {
+  margin: 0;
+}
+
+.imdb-link a {
+  font-size: 0.7rem;
+  background-color: coral;
+  color: rgb(29, 27, 27);
+  border: 2px solid rgb(29, 27, 27);
+  border-radius: 10px;
+  padding: 0 5px;
+  text-decoration: none;
+  transition: all 1s;
+}
+
+.imdb-link a:hover {
+  background-color: rgb(29, 27, 27);
+  color: peru;
+  text-shadow: 0 0 1px coral;
+  transition: all 1s;
+}
+
+.loader {
+  display: block;
+  margin: auto;
 }
