@@ -8,7 +8,7 @@ const MovieDisplay = () => {
     const [movies,setMovies] = useState([])
     const [search,setSearch] = useState('')
     const [loading,setLoading] = useState(false)
-    const api_url = "http://www.omdbapi.com/?i=tt3896198&apikey=341697da"
+    const api_url = `http://www.omdbapi.com/?i=tt3896198&apikey=${process.env.REACT_APP_MOVIE_API_KEY}`;
 
 
     const searchMovies = async (title)=>{
