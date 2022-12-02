@@ -15,14 +15,12 @@ const MovieDisplay = () => {
         setLoading(true)
         const response = await fetch(`${api_url}&s=${title}`)
         const data = await response.json()
-        console.log(data.Search)
         setLoading(false)
         setMovies(data.Search)
     } 
 
     return ( 
         <>
-        {/* <h3 className="caption">Search your favorite movie</h3> */}
         <div className="searchbar">
             <input type="text" placeholder="Enter Movie Name" onChange={(e)=>setSearch(e.target.value)}/>
             <button title="Search" onClick={()=>searchMovies(search)}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
